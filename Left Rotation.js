@@ -33,7 +33,6 @@ function readLine() {
 
 function rotateLeft(d, arr) {
     let rotateEle;
-    let tempArray=[];
         for(let i=0;i<d;i++){
             rotateEle=arr.shift();
             arr.push(rotateEle);

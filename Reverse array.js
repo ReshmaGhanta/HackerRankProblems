@@ -1,15 +1,14 @@
 function processData(input) {
     let inputVal=input.split("\n");
-    let [N,M]=inputVal[0].split(" ").map(Number);
-   
-    //console.log(N)
-    for (let i = 1; i <= N; i++) {
-    const row = inputVal[i].split(' ').map(Number);
-     const sum = row.reduce((acc, num) => acc + num, 0);
-    console.log(sum);
+    let arrSize=parseInt(inputVal[0]);
+    let arr= inputVal[1].trim().split(' ').map(Number);
+    let newArr=[];
+    let element;
+    for(let i=0;i<arrSize;i++){
+        element=arr.pop();
+         newArr.push(element);    
     }
-  
-
+    console.log(newArr.join(' '));
 } 
 
 process.stdin.resume();
