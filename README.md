@@ -1,4 +1,4 @@
 # HackerRankProblems
 
 These are my solutions for hacker rank problems.
-All solutions are written in Javascript
+All solutions are written in NodeJS/Javascript
