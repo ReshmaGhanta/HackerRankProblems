@@ -1,23 +1,15 @@
 function processData(input) {
-    const [a,b] = input.trim().split(' ').map(Number);
-        
-      let result = 1;
-      for (let i = 0; i < b; i++) {
-        result *= a;
+    let [a,b] = input.trim().split(' ').map(Number);
+      let x=BigInt(a);
+      let result = BigInt(1);
+      while(b>0){
+          if((b&1)==1){
+             result=result*x;
+             }
+               x=x*x;
+          b=b>>1;
       }
       
-     console.log(result);
+     console.log(result.toString());
     
     } 
-    
-    process.stdin.resume();
-    process.stdin.setEncoding("ascii");
-    _input = "";
-    process.stdin.on("data", function (input) {
-        _input += input;
-    });
-    
-    process.stdin.on("end", function () {
-       processData(_input);
-    });
-    
